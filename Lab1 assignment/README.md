@@ -111,7 +111,9 @@ model complexity and classification performance. The Pareto front therefore
 provides a way to identify candidate architectures based on the desired
 balance between model cost and accuracy.
 
+
 ### Pareto-Optimal Front
 The following plot shows all explored neural-network configurations, with
 the Pareto-optimal configurations visually distinguished from the dominated
 configurations.
+  
