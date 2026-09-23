@@ -116,4 +116,4 @@ balance between model cost and accuracy.
 The following plot shows all explored neural-network configurations, with
 the Pareto-optimal configurations visually distinguished from the dominated
 configurations.
-![Pareto_Optimal_Front](Lab1%20assignment/Paret_Optimal_Front.png)  
+![Pareto_Optimal_Front](Lab1%20assignment/Pareto_Optimal_Front.png)  
