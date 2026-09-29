@@ -131,11 +131,3 @@ Panda
 Matplotlib
 ```
 ---
-
-
-**Course:** ELCT918
-**Assignment:** Lab Assignment 2
-**Topic:** Comparative Study of Classical CNN Architectures
-**Architectures:** LeNet-5, AlexNet, VGG16
-**Datasets:** CIFAR-10, CIFAR-100
-**Framework:** TensorFlow / Keras
