@@ -30,7 +30,7 @@ ELCT918/
     ├── MADBase_Train.py            # Bonus: orientation check + training on MADBase
     ├── realtime_digit_MAD.py       # Bonus: real-time app (Arabic-Indic digits)
     ├── combined_20_Model.py        # Optional: 20-class training + confusion analysis
-    ├── realtime_combined.py        # Optional: real-time app (20-class model)
+    ├── realtime_digit_combined.py        # Optional: real-time app (20-class model)
     ├── Outputs/
     │   ├── models/LeNet_MNIST_best.keras
     │   ├── results/                # history and evaluation CSV files
