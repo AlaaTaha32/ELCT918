@@ -147,10 +147,10 @@ Outputs are saved to `Outputs/` (best model, history CSV, accuracy and loss plot
 
 A blank image (very low contrast) or a frame with no valid contour raises a `ValueError`, which the real-time app reports as "No digit detected".
 
-To visualise every step on a test image, set the task number in `LeNet.py` to `2` and run:
+To visualise every step on a test image, set the task number in `MNISt_Train.py` to `2` and run:
 
 ```bash
-python LeNet.py
+python MNISt_Train.py
 ```
 
 ---
