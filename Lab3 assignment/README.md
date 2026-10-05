@@ -55,7 +55,7 @@ The datasets are **not** included (see [Datasets](#datasets)).
 Python 3.9 or newer is recommended.
 
 ```bash
-git clone https://github.com/<your-username>/ELCT918.git
+git clone https://github.com/AlaaTaha32/ELCT918.git
 cd "ELCT918/Lab3 assignment"
 
 python -m venv venv
