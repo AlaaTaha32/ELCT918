@@ -28,7 +28,7 @@ TRAIN_DIR = "MNIST/training"
 TEST_DIR  = "MNIST/testing"
 
 # Output directory
-BASE_DIR = "Outputs"
+BASE_DIR = "Outputs_MNSIT"
 
 # Preprocessing images directory
 TEST_IMAGE_PATH = r"Preprocessing_Images/digit.png"
