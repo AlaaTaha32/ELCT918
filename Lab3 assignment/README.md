@@ -105,7 +105,7 @@ AHDD/
 
 ## Task 1 – Training LeNet-5 on MNIST
 
-`MNISt_Train.py` contains the full experiment.
+`MNIST_Train.py` contains the full experiment.
 
 | Item | Setting |
 |---|---|
@@ -121,19 +121,19 @@ AHDD/
 
 The output layer has no softmax. Softmax is applied at inference time to get confidence values.
 
-To train, set the task number in the last line of `MNISt_Train.py` to `1` and run:
+To train, set the task number in the last line of `MNIST_Train.py` to `1` and run:
 
 ```bash
-python MNISt_Train.py
+python MNIST_Train.py
 ```
 
-Outputs are saved to `Outputs/` (best model, history CSV, accuracy and loss plots, evaluation CSV).
+Outputs are saved to `Outputs_MNIST/` (best model, history CSV, accuracy and loss plots, evaluation CSV).
 
 ---
 
 ## Task 2 – Preprocessing pipeline
 
-`preprocess_image()` in `MNISt_Train.py` converts a camera image into the format the network was trained on:
+`preprocess_image()` in `MNIST_Train.py` converts a camera image into the format the network was trained on:
 
 1. Grayscale conversion
 2. Gaussian blur (5×5)
@@ -147,10 +147,10 @@ Outputs are saved to `Outputs/` (best model, history CSV, accuracy and loss plot
 
 A blank image (very low contrast) or a frame with no valid contour raises a `ValueError`, which the real-time app reports as "No digit detected".
 
-To visualise every step on a test image, set the task number in `MNISt_Train.py` to `2` and run:
+To visualise every step on a test image, set the task number in `MNIST_Train.py` to `2` and run:
 
 ```bash
-python MNISt_Train.py
+python MNIST_Train.py
 ```
 
 ---
@@ -158,7 +158,7 @@ python MNISt_Train.py
 ## Task 3 – Real-time application
 
 ```bash
-python realtime_mnist.py
+python realtime_digit.py
 ```
 
 - Write a digit (dark ink on white paper, a thick marker works best) inside the white box.
@@ -174,16 +174,16 @@ python realtime_mnist.py
 ### 1. Training
 
 ```bash
-python madbase_train.py check    # visualise samples to verify orientation and labels
-python madbase_train.py train    # train, validate, test
+python MADBase_Train.py check    # visualise samples to verify orientation and labels
+python MADBase_Train.py train    # train, validate, test
 ```
 
-The `check` step shows each sample both as-is and transposed. The AHDD CSV images are commonly stored transposed, so set `TRANSPOSE` at the top of `madbase_train.py` to match whichever row shows upright digits with the correct labels. Training reuses the same architecture and hyperparameters as Task 1, with data augmentation (small rotation, shift, zoom) applied to the training set only. The normalisation mean and std are computed from the MADBase training split and saved to `madbase_norm.json`.
+The `check` step shows each sample both as-is and transposed. The AHDD CSV images are commonly stored transposed, so set `TRANSPOSE` at the top of `MADBase_Train.py` to match whichever row shows upright digits with the correct labels. Training reuses the same architecture and hyperparameters as Task 1, with data augmentation (small rotation, shift, zoom) applied to the training set only. The normalisation mean and std are computed from the MADBase training split and saved to `madbase_norm.json`.
 
 ### 2. Real-time application
 
 ```bash
-python madbase_realtime.py
+python realtime_digit_MAD.py
 ```
 
 Same interface as Task 3. Arabic-Indic glyphs (٠ – ٩) are drawn on screen if a suitable font is found (set `FONT_PATH` in the script for non-Windows systems).
@@ -211,9 +211,9 @@ How it is handled:
 One LeNet-5 with 20 outputs: classes 0–9 are the Western digits (MNIST) and classes 10–19 are the Arabic-Indic digits (MADBase).
 
 ```bash
-python combined_20class.py train      # train, test, then analyse
-python combined_20class.py analyse    # redo only the analysis from the saved model
-python realtime_combined.py           # real-time app
+python combined_20_Model.py train      # train, test, then analyse
+python combined_20_Model.py analyse    # redo only the analysis from the saved model
+python realtime_digit_combined.py           # real-time app
 ```
 
 The analysis step writes to `Outputs_Combined/`:
@@ -235,7 +235,7 @@ All weights are small (well under GitHub's 100 MB limit) and are included in the
 
 | Model | File |
 |---|---|
-| LeNet-5, MNIST | `Outputs/models/LeNet_MNIST_best.keras` |
+| LeNet-5, MNIST | `Outputs_MNIST/models/LeNet_MNIST_best.keras` |
 | LeNet-5, MADBase | `Outputs_MADBase/LeNet_MADBase_best.keras` (+ `madbase_norm.json`) |
 | LeNet-5, 20-class | `Outputs_Combined/LeNet_20class_best.keras` (+ `norm_20class.json`) |
 
