@@ -2,6 +2,7 @@
 
 A LeNet-5 convolutional network trained on MNIST and deployed in a real-time webcam application. 
 The lab also covers two optional extensions: Arabic-Indic digits (MADBase) and a single 20-class model that recognises both digit systems.
+
 ---
 
 ## Contents
@@ -117,6 +118,8 @@ AHDD/
 | Optimiser | SGD, momentum 0.9, weight decay 5e-4 |
 | Learning rate | 0.01 → 0.001 → 0.0001 (step schedule) |
 | Batch size | 128 |
+| Epochs | 30 |
+| Seed | 42 |
 | Model selection | Best validation accuracy checkpoint |
 
 The output layer has no softmax. Softmax is applied at inference time to get confidence values.
@@ -223,7 +226,14 @@ The analysis step writes to `Outputs_Combined/`:
 - `cross_pairs.csv` – all Western/Arabic digit pairs ranked by confusion rate
 - `top_pairs.png` – class-average images of the most confusable pairs
 
-**Most confusable cross-system pairs:** `[Western 0 & Arabic 5 - Western 1 & Arabic 1 - Western 9 & Arabic 9 - Western 7 & Arabic 6]`
+**Most confusable cross-system pairs:**
+| Pair | Confusion rate
+|---|---|
+| Western 0 & Arabic 5 | 18.2% |
+| Western 1 & Arabic 1 | 12.8% |
+| Western 9 & Arabic 9 | 7.7% |
+| Western 7 & Arabic 6 | 3.4% |
+
 
 The real-time app also displays the runner-up class and its probability, which makes ambiguous pairs visible during the demo.
 
