@@ -223,7 +223,7 @@ The analysis step writes to `Outputs_Combined/`:
 - `cross_pairs.csv` – all Western/Arabic digit pairs ranked by confusion rate
 - `top_pairs.png` – class-average images of the most confusable pairs
 
-**Most confusable cross-system pairs:** `[Western 0 & Arabic 5 - Western 1 & Arabic 1 - Western 9 & Arabic 9 - Western 7 & Arabic 6`
+**Most confusable cross-system pairs:** `[Western 0 & Arabic 5 - Western 1 & Arabic 1 - Western 9 & Arabic 9 - Western 7 & Arabic 6]`
 
 The real-time app also displays the runner-up class and its probability, which makes ambiguous pairs visible during the demo.
 
