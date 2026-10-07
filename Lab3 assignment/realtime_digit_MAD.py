@@ -3,7 +3,6 @@
 #
 # Keys:  q = quit    r = start/stop recording a demo video
 # ============================================================
-
 import json
 import time
 import cv2
