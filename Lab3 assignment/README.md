@@ -259,4 +259,4 @@ The `.json` files hold the normalisation statistics and must stay next to the mo
 - **It predicts a digit when nothing is written.** Increase `MIN_CONTRAST` or `MIN_AREA_RATIO` so noise and shadows are rejected.
 - **Thin pen strokes are misread.** Use a thick marker, or keep `DILATION = True`.
 - **Arabic glyphs appear as plain digits.** The font in `FONT_PATH` was not found. Point it to a font that contains Arabic-Indic digits.
-- **`ModuleNotFoundError: LeNet`.** Run the scripts from inside the `Lab3 assignment` folder.
+- **`ModuleNotFoundError: MNIST_Train`.** Run the scripts from inside the `Lab3 assignment` folder.
