@@ -13,6 +13,7 @@ The lab also covers two optional extensions: Arabic-Indic digits (MADBase) and a
 - [Task 1 – Training LeNet-5 on MNIST](#task-1--training-lenet-5-on-mnist)
 - [Task 2 – Preprocessing pipeline](#task-2--preprocessing-pipeline)
 - [Task 3 – Real-time application](#task-3--real-time-application)
+- [Running on a video file or another camera](#running-on-a-video-file-or-another-camera)
 - [Bonus – Arabic-Indic digits (MADBase)](#bonus--arabic-indic-digits-madbase)
 - [Optional – Single 20-class model](#optional--single-20-class-model)
 - [Trained weights](#trained-weights)
@@ -236,6 +237,32 @@ The analysis step writes to `Outputs_Combined/`:
 
 
 The real-time app also displays the runner-up class and its probability, which makes ambiguous pairs visible during the demo.
+
+---
+
+## Running on a video file or another camera
+
+All three real-time applications read from a single setting, `CAMERA_INDEX`, in the configuration block at the top of the script. To change the input, edit that one line and run the script as usual:
+
+```python
+CAMERA_INDEX = 0                       # default: laptop webcam
+CAMERA_INDEX = 1                       # another camera, e.g. a phone used as a webcam (try 0, 1, 2)
+CAMERA_INDEX = "videos/digits.mp4"     # a recorded video file instead of a live camera
+```
+
+| Application | Script to edit |
+|---|---|
+| Western digits (MNIST) | `realtime_digit.py` |
+| Arabic-Indic digits (MADBase) | `realtime_digit_MAD.py` |
+| 20-class model | `realtime_digit_combined.py` |
+
+Notes:
+
+- The video path is relative to the `Lab3 assignment` folder. On Windows, use forward slashes (`"videos/digits.mp4"`) or a raw string (`r"C:\videos\digits.mp4"`).
+- The application stops when the video ends, or when you press `q`.
+- The digit is read from the fixed box in the centre of the frame, so record the video with the written digit held in the middle of the picture.
+- A video file is processed as fast as the computer allows. To play it at normal speed, change `cv2.waitKey(1)` to `cv2.waitKey(30)` in the main loop.
+- If the digits look backwards in the **Model Input** window, the video was recorded with a mirrored camera (for example a phone's front camera). In that case, flip the cropped region instead of the full frame.
 
 ---
 
