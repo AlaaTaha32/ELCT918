@@ -1,0 +1,2 @@
+architecture,dataset,test_loss,test_accuracy,num_parameters
+LeNet-5,MNIST,0.025885943323373795,99.21000003814697,61706
