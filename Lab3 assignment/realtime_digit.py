@@ -12,7 +12,7 @@ from MNIST_Train import preprocess_image
 # CONFIGURATION
 # ============================================================
 
-MODEL_PATH = "Outputs/models/LeNet_MNIST_best.keras"
+MODEL_PATH = "Outputs_MNIST/models/LeNet_MNIST_best.keras"
 
 CAMERA_INDEX = 0
 
