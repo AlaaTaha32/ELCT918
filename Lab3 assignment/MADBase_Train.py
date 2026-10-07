@@ -5,7 +5,6 @@
 #   python madbase_train.py check   -> visualise samples (orientation / labels)
 #   python madbase_train.py train   -> train, validate, test, save everything
 # ============================================================
-
 import os
 import sys
 import json
