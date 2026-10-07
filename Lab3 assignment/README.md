@@ -16,6 +16,7 @@ The lab also covers two optional extensions: Arabic-Indic digits (MADBase) and a
 - [Running on a video file or another camera](#running-on-a-video-file-or-another-camera)
 - [Bonus – Arabic-Indic digits (MADBase)](#bonus--arabic-indic-digits-madbase)
 - [Optional – Single 20-class model](#optional--single-20-class-model)
+- [Demo videos](#demo-videos)
 - [Trained weights](#trained-weights)
 - [Results](#results)
 - [Troubleshooting](#troubleshooting)
@@ -263,6 +264,18 @@ Notes:
 - The digit is read from the fixed box in the centre of the frame, so record the video with the written digit held in the middle of the picture.
 - A video file is processed as fast as the computer allows. To play it at normal speed, change `cv2.waitKey(1)` to `cv2.waitKey(30)` in the main loop.
 - If the digits look backwards in the **Model Input** window, the video was recorded with a mirrored camera (for example a phone's front camera). In that case, flip the cropped region instead of the full frame.
+
+---
+
+## Demo videos
+
+Screen recordings of the real-time applications (hosted on Google Drive because of file size):
+
+| Application | Demo |
+|---|---|
+| Western digits (MNIST), Task 3 | [Watch the demo](https://drive.google.com/file/d/1aahJ1ZKlrfBD3EK99-OZXEtlWt-dMUet/view?usp=sharing) |
+| Arabic-Indic digits (MADBase), Bonus | [Watch the demo](https://drive.google.com/file/d/1Q5NoNg_flTtqZ3Cm71yY-GVvfVfJWKSF/view?usp=sharing) |
+| Single 20-class model, Optional | [Watch the demo](https://drive.google.com/file/d/14mu-Gg0ARCeR9k__BaBGD3s8UaCgYgrt/view?usp=sharing) |
 
 ---
 
