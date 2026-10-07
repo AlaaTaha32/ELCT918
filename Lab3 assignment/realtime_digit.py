@@ -2,7 +2,6 @@
 # LAB 3 — TASK 3
 # REAL-TIME HANDWRITTEN DIGIT RECOGNITION
 # ============================================================
-
 import cv2
 import time
 import numpy as np
