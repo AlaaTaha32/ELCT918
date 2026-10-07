@@ -10,7 +10,6 @@
 #
 # Needs LeNet.py and MADbase_train.py in the same folder.
 # ============================================================
-
 import os
 import sys
 import json
