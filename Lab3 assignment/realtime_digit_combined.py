@@ -4,7 +4,6 @@
 # Classes: 0-9 = Western digits, 10-19 = Arabic-Indic digits (10 + d)
 # Keys:    q = quit    r = start/stop recording a demo video
 # ============================================================
-
 import json
 import time
 import cv2
