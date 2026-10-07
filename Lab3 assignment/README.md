@@ -247,13 +247,9 @@ The `.json` files hold the normalisation statistics and must stay next to the mo
 
 | Model | Best validation accuracy | Test accuracy |
 |---|---|---|
-| MNIST | 98.70% | 98.89% |
-| MADBase | `[fill in]` | `[fill in]` |
-| 20-class (Western + Arabic-Indic) | `[fill in]` | `[fill in]` |
-
-**Real-time performance:** `[average FPS on your machine]`
-
-**Observations:** `[a few lines on the gap between test accuracy and webcam performance, what helped (thick pen, even lighting, ROI copy, no mirroring of the model input), and what still fails]`
+| MNIST | 99.14% | 99.21% |
+| MADBase | 99.42% | 99.17% |
+| 20-class (Western + Arabic-Indic) | 94.56% | 94.16% |
 
 ---
 
