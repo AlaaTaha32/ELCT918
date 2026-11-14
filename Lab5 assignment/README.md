@@ -77,26 +77,8 @@ Each design has two bitstreams, built from separate top levels and constraint fi
 
 Build in Vivado for the part `xc7a100tcsg324-1`: add the sources from `rtl/` and the chosen `FPGA/` folder, add that folder's `.xdc`, set its top module, then generate the bitstream. Do not keep two constraint files in one project.
 
-## Results
-
-| Metric | Baseline | Carat column |
-|---|---|---|
-| LUTs | TBD | TBD |
-| Flip-flops | TBD | TBD |
-| DSP48 slices | TBD | TBD |
-| Max clock frequency | TBD | TBD |
-| Latency (cycles per batch) | TBD | TBD |
-| Accuracy vs. exact reference | TBD | TBD |
-
-Full reports are in `Vivado_Reports/`.
-
 ## Reference
 
 Z. Pan, J. San Miguel, D. Wu. *Carat: Unlocking Value-Level Parallelism for Multiplier-Free GEMMs.* ASPLOS '24, La Jolla, CA, 2024.
-
-## Team
-
-- **Your Name**: [@your-github-username](https://github.com/your-github-username)
-- **Teammate Name**: [@teammate-github-username](https://github.com/teammate-github-username)
 
 Course: *Lab Assignment 5 – From Paper to Silicon*.
